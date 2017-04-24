@@ -34,4 +34,21 @@ functionA -> hello -> functionB
 after functionB receives hello, the program will terminate.
 ```
 
+## 3hellobufferedchannels
+
+Shows how to use buffered channels using a statically defined number of
+go routines and tasks which are configurable.
+
+```go
+const (
+	numberGoroutines 	= 4
+	taskLoad 		= 10
+)
+```
+
+## 4supervisedbufferedchannels
+
+Introduces the concept of a supervisor, that waits for
+all workers to end, before each worker goroutine ends, they send 
+a dead letter to the supervisor.
 
